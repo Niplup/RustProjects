@@ -11,8 +11,10 @@ fn main() {
 
 fn first_word_slice(phrase: &str) -> &str {
     for (i,c) in phrase.chars().enumerate() {
+        //The [..i] notation means from 0 to i
         if c == ' ' {return &phrase[..i];}
     }
+    //Returns entirety of slice [..]
     &phrase[..]
 }
 
